@@ -1,0 +1,16 @@
+aws:
+  sns:
+    topics:
+      - name: OrderChangeExample
+        arn:
+        subscribers:
+          - name: OrderTrackingExample
+            listener: com.example.snssample.listener.OrderTrackingListener
+          - name: OrderCancelExample
+            listener: com.example.snssample.listener.OrderCancelListener
+          - name: OrderOutboundExample
+            listener: com.example.snssample.listener.OrderOutboundListener
+  credentials:
+    accessKey:
+    secretKey:
+  region: ap-northeast-2
